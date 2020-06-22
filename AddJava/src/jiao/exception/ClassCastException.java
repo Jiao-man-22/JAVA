@@ -17,6 +17,7 @@ package jiao.exception;
  * Children children=(Children)new Parent();
  * */
 class  Parent{
+  
 	public void draw(Parent p){
 		System.out.println("Parent£º"+p);
 	}
