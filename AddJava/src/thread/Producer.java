@@ -16,11 +16,9 @@ public class Producer implements Runnable {
 		int i=0;
 		while(true) {
 			if(i==0) {
-				q.name="张三";
-				q.sex="男";
+				q.set("张三", "男");
 			}else {
-				q.name="李四";
-				q.sex="女";
+				q.set("李四", "女");;
 			}
 			i=(i+1)%2;
 		}
