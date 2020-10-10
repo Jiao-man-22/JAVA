@@ -19,16 +19,19 @@ public class dome4 {
 		}
 	}
 	public static int[] sort(int[] array) {
-		//先遍历再比较
+		//冒泡排序
 		for(int i=0;i<array.length-1;i++) {
-			int max=array[0];
-			while(max<array[i+1]) {
-				array[i]=max;
-				max=array[i+1];
+			for(int j=1;j<array.length-i;j++) {
+				if(array[j-1]<array[j]) {
+					int temp=array[j-1];
+					array[j-1]=array[j];
+					array[j]=temp;
+				}
+			}		
 			}
-		}
 		return array;
-	}
+		}
+
 	public static void printArray(int[] array) {
 		for(int i=0;i<array.length;i++) {
 			System.out.print(array[i]+"\t");
